@@ -1,0 +1,44 @@
+ur5:
+  # The PID gains and controller settings must be saved in a yaml file 
+  # that gets loaded to the param server via the roslaunch file
+
+  # Publish all joint states -----------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 100  
+  
+  
+  
+  # Position Controllers   -------------------------------------
+
+  joint1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint1
+    pid: {p: 2000,  i: 0.01, d: 30}
+    #pid: {p: 250,  i: 0.01, d: 30}
+  joint2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint2
+    pid: {p: 2000,  i: 0.01, d: 30}
+    #pid: {p: 220,  i: 0.01, d: 30}
+  joint3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint3
+    pid: {p: 2000,  i: 0.1, d: 20}
+    #pid: {p: 150,  i: 0.1, d: 20}
+  joint4_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint4
+    pid: {p: 1000,  i: 0.1, d: 10}
+    #pid: {p: 90,  i: 0.1, d: 10}
+  joint5_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint5
+    pid: {p: 500,  i: 0.1, d: 10}
+    #pid: {p: 40,  i: 0.1, d: 7}
+  joint6_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint6
+    pid: {p: 200,  i: 0.1, d: 10}
+    #pid: {p: 15,  i: 0.1, d: 5}
+
