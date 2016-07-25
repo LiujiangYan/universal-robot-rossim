@@ -6,6 +6,7 @@ from std_msgs.msg import *
 
 def talker(jointVariable, time):
 	#read the joint variable and time from csv file
+	#the data is formatted in ndarray (2 dimension, n*6)
 	jointVariable = numpy.loadtxt(open("data/jointVariable.csv","rb"), delimiter=",",skiprows=0)
 	time = numpy.loadtxt(open("data/time.csv","rb"), delimiter=",",skiprows=0)
 	
